@@ -4,8 +4,7 @@ description: Helm Chart for Installation of Fujitsu Enterprise Postgres Operator
 
 annotations:
   catalog.cattle.io/certified: partner
-  catalog.cattle.io/display-name: Fujitsu.fep
-  catalog.cattle.io/release-name: Fujitsufep
+  catalog.cattle.io/release-name: fujitsu-fep
 
 
 icon: https://partner-charts.rancher.io/assets/logos/fujitsu-fep.png  
