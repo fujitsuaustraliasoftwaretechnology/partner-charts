@@ -20,13 +20,13 @@ icon: https://partner-charts.rancher.io/assets/logos/fujitsu-fep.png
 type: application
 
 # FEP Operator helm chart version.
-version: 1.0.001
+version: "1.0.001"
 
 # The version number of the FEP Operator as specified in CSV.
-appVersion: 1.0.001-ga
+appVersion: "1.0.001-ga"
 
 # Supported K8s version
-kubeVersion: 1.16 - 1.22
+kubeVersion: "1.16 - 1.22"
 
 # keywords for helm charts as specified in CSV.
 keywords:
