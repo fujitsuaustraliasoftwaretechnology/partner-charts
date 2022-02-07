@@ -1,6 +1,10 @@
+annotations:
+  catalog.cattle.io/certified: partner
+  catalog.cattle.io/release-name: fujitsu-fep
 apiVersion: v2
-appVersion: 4.0.0
+appVersion: 1.0.001-ga
 description: Helm Chart for Installation of Fujitsu Enterprise Postgres Operator
+icon: https://partner-charts.rancher.io/assets/logos/fujitsu-fep.png
 keywords:
 - postgres
 - postgresql
@@ -8,11 +12,11 @@ keywords:
 - sql
 - Fujitsu
 - fep
-kubeVersion: v1.21.7+rke2r2
+kubeVersion: 1.16 - 1.22
 maintainers:
 - email: pgtechenquiry@au.fujitsu.com
   name: Fujitsu
   url: https://www.postgresql.fastware.com/
-name: fujitsu-enterprise-postgres-for-kubernetes
+name: fujitsu-fep
 type: application
-version: 1.0.0
+version: 1.0.001
