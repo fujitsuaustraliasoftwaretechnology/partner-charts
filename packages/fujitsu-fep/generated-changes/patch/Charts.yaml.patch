@@ -1,0 +1,18 @@
+apiVersion: v2
+appVersion: 4.0.0
+description: Helm Chart for Installation of Fujitsu Enterprise Postgres Operator
+keywords:
+- postgres
+- postgresql
+- database
+- sql
+- Fujitsu
+- fep
+kubeVersion: v1.21.7+rke2r2
+maintainers:
+- email: pgtechenquiry@au.fujitsu.com
+  name: Fujitsu
+  url: https://www.postgresql.fastware.com/
+name: fujitsu-enterprise-postgres-for-kubernetes
+type: application
+version: 1.0.0
