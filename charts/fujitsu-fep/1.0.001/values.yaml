@@ -1,0 +1,10 @@
+# Default values for fep operator installation.
+# This is a YAML-formatted file.
+
+# PREREQUISITES
+# This installation assumes that
+# GAP stack is installed on k8s cluster
+# OR
+# ServiceMonitor and PrometheusRule CRD is defined on k8s cluster
+
+# this is place where we will add variables if needed
