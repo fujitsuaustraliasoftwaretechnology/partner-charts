@@ -1318,7 +1318,7 @@ entries:
     created: "2022-02-07T11:10:07.587095417Z"
     description: Helm Chart for Installation of Fujitsu Enterprise Postgres Operator
     digest: dbe6d32ca8aa2c75e15f37768a0d0f767ba45a7856428857388148ce6ff847f3
-    icon: https://partner-charts.rancher.io/assets/logos/fujitsu-fep.png
+    icon: https://raw.githubusercontent.com/fujitsuaustraliasoftwaretechnology/partner-charts/main-source/assets/logos/fujitsu-fep.png
     keywords:
     - postgres
     - postgresql
