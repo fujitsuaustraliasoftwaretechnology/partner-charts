@@ -565,6 +565,33 @@ entries:
       catalog.cattle.io/namespace: cloudcasa-io
       catalog.cattle.io/release-name: cloudcasa
     apiVersion: v2
+    appVersion: 3.0.0
+    created: "2022-02-15T16:31:46.786428177+05:30"
+    description: CloudCasa backup service for Kubernetes and cloud native applications
+    digest: d9dd9949fef49bc13aaf984e6e1b9cb0109fad9b457b6269d36cd5555a8f0d7c
+    home: https://cloudcasa.io
+    icon: https://partner-charts.rancher.io/assets/logos/cloudcasa.png
+    keywords:
+    - Backup
+    - Catalogic
+    - CloudCasa
+    - Restore
+    - Copy
+    - Scan
+    kubeVersion: '>=1.17.0-0'
+    maintainers:
+    - email: support@cloudcasa.io
+      name: catalogicsoftware
+    name: cloudcasa
+    urls:
+    - assets/cloudcasa/cloudcasa-3.0.0.tgz
+    version: 3.0.0
+  - annotations:
+      catalog.cattle.io/certified: partner
+      catalog.cattle.io/display-name: CloudCasa
+      catalog.cattle.io/namespace: cloudcasa-io
+      catalog.cattle.io/release-name: cloudcasa
+    apiVersion: v2
     appVersion: 2.2.0
     created: "2021-12-16T17:02:14.055956823+05:30"
     description: CloudCasa backup service for Kubernetes and cloud native applications
@@ -1046,6 +1073,37 @@ entries:
       catalog.cattle.io/display-name: Federator.ai
       catalog.cattle.io/release-name: federatorai
     apiVersion: v1
+    appVersion: 5.0.0-p1
+    created: "2022-03-21T17:05:44.18656346+08:00"
+    description: Federator.ai helps enterprises optimize cloud resources, maximize
+      application performance, and save significant cost without excessive over-provisioning
+      or under-provisioning of resources, meeting the service-level requirements of
+      their applications.
+    digest: 7f3c4e92c9b0ba5141107b00b4bba9f083eb777d7706c2aec3e0bb86cb79ee28
+    home: https://www.prophetstor.com
+    icon: https://raw.githubusercontent.com/prophetstor-ai/public/master/images/logo.png
+    keywords:
+    - AI
+    - Resource Orchestration
+    - NoOps
+    - AIOps
+    - Intelligent Workload Management
+    - Cost Optimization
+    kubeVersion: 1.16 - 1.22
+    maintainers:
+    - email: support@prophetstor.com
+      name: ProphetStor Data Services, Inc.
+    name: federatorai
+    sources:
+    - https://www.prophetstor.com
+    urls:
+    - assets/federatorai/federatorai-5.0.0.tgz
+    version: 5.0.0
+  - annotations:
+      catalog.cattle.io/certified: partner
+      catalog.cattle.io/display-name: Federator.ai
+      catalog.cattle.io/release-name: federatorai
+    apiVersion: v1
     appVersion: 4.7.2-ga
     created: "2021-11-10T15:17:54.100665205+08:00"
     description: Federator.ai helps enterprises optimize cloud resources, maximize
@@ -1394,6 +1452,113 @@ entries:
     - assets/fujitsu-fep/fujitsu-fep-1.0.0.tgz
     version: 1.0.0
   gluu:
+  - annotations:
+      artifacthub.io/changes: |
+        - Update always
+      artifacthub.io/containsSecurityUpdates: "true"
+      artifacthub.io/images: |
+        - name: auth-server
+          image: janssenproject/auth-server:1.0.0-beta.16
+        - name: auth-server-key-rotation
+          image: janssenproject/certmanager:1.0.0-beta.16
+        - name:  client-api
+          image: janssenproject/client-api:1.0.0-beta.16
+        - name: configuration-manager
+          image: janssenproject/configurator:1.0.0-beta.16
+        - name:  config-api
+          image: janssenproject/config-api:1.0.0-beta.16
+        - name: fido2
+          image: janssenproject/fido2:1.0.0-beta.16
+        - name: opendj
+          image: gluufederation/opendj:5.0.0_dev
+        - name: persistence
+          image: janssenproject/persistence-loader:1.0.0-beta.16
+        - name: scim
+          image: janssenproject/scim:1.0.0-beta.16
+      artifacthub.io/license: Apache-2.0
+      artifacthub.io/prerelease: "true"
+      catalog.cattle.io/certified: partner
+      catalog.cattle.io/display-name: Gluu Cloud Identity and Access Management
+      catalog.cattle.io/release-name: gluu
+    apiVersion: v2
+    appVersion: 5.0.0
+    created: "2022-03-16T12:29:00.327278263Z"
+    dependencies:
+    - condition: global.config.enabled
+      name: config
+      repository: ""
+      version: 5.0.3
+    - condition: global.config-api.enabled
+      name: config-api
+      repository: ""
+      version: 5.0.3
+    - condition: global.opendj.enabled
+      name: opendj
+      repository: ""
+      version: 5.0.3
+    - condition: global.auth-server.enabled
+      name: auth-server
+      repository: ""
+      version: 5.0.3
+    - condition: global.admin-ui.enabled
+      name: admin-ui
+      repository: ""
+      version: 5.0.3
+    - condition: global.fido2.enabled
+      name: fido2
+      repository: ""
+      version: 5.0.3
+    - condition: global.scim.enabled
+      name: scim
+      repository: ""
+      version: 5.0.3
+    - condition: global.nginx-ingress.enabled
+      name: nginx-ingress
+      repository: ""
+      version: 5.0.3
+    - condition: global.oxshibboleth.enabled
+      name: oxshibboleth
+      repository: ""
+      version: 5.0.3
+    - condition: global.oxpassport.enabled
+      name: oxpassport
+      repository: ""
+      version: 5.0.3
+    - condition: global.casa.enabled
+      name: casa
+      repository: ""
+      version: 5.0.3
+    - condition: global.auth-server-key-rotation.enabled
+      name: auth-server-key-rotation
+      repository: ""
+      version: 5.0.3
+    - condition: global.client-api.enabled
+      name: client-api
+      repository: ""
+      version: 5.0.3
+    - condition: global.persistence.enabled
+      name: persistence
+      repository: ""
+      version: 5.0.3
+    - condition: global.istio.ingress
+      name: cn-istio-ingress
+      repository: ""
+      version: 5.0.3
+    description: Gluu Access and Identity Management
+    digest: 5179611a022721f7667fd8212d04a07e21165c2b8409de3197468a82d76afd4b
+    home: https://www.gluu.org
+    icon: https://gluu.org/docs/gluu-server/favicon.ico
+    kubeVersion: '>=v1.21.0-0'
+    maintainers:
+    - email: support@gluu.org
+      name: moabu
+    name: gluu
+    sources:
+    - https://gluu.org/docs/gluu-server
+    - https://github.com/GluuFederation/flex/flex-cn-setup
+    urls:
+    - assets/gluu/gluu-5.0.302.tgz
+    version: 5.0.302
   - annotations:
       artifacthub.io/changes: |
         - Gluu 5.0 Openbanking Distribution. Auth-server and config-api.
@@ -1997,6 +2162,72 @@ entries:
       catalog.cattle.io/display-name: TrilioVault for Kubernetes Operator
       catalog.cattle.io/release-name: k8s-triliovault-operator
     apiVersion: v1
+    appVersion: 2.7.1
+    created: "2022-03-09T12:09:37.024211417Z"
+    description: K8s-TrilioVault-Operator is an operator designed to manage the K8s-TrilioVault
+      Application Lifecycle.
+    digest: 7178d41e54f71a5f7eaed746fd029406ae0112cba26403b16a1a4203687ef059
+    home: https://github.com/trilioData/k8s-triliovault-operator
+    icon: https://www.trilio.io/wp-content/uploads/2021/01/Trilio-2020-logo-RGB-gray-green.png
+    kubeVersion: '>=1.18.0-0'
+    maintainers:
+    - email: prafull.ladha@trilio.io
+      name: prafull11
+    name: k8s-triliovault-operator
+    sources:
+    - https://github.com/trilioData/k8s-triliovault-operator
+    urls:
+    - assets/k8s-triliovault-operator/k8s-triliovault-operator-2.7.100.tgz
+    version: 2.7.100
+  - annotations:
+      catalog.cattle.io/certified: partner
+      catalog.cattle.io/display-name: TrilioVault for Kubernetes Operator
+      catalog.cattle.io/release-name: k8s-triliovault-operator
+    apiVersion: v1
+    appVersion: 2.7.0
+    created: "2022-03-01T07:51:08.867986912Z"
+    description: K8s-TrilioVault-Operator is an operator designed to manage the K8s-TrilioVault
+      Application Lifecycle.
+    digest: 6b2cfef43ef5a08e2e98fb8a556e32270297cb69330de8f987da42b4ff11db84
+    home: https://github.com/trilioData/k8s-triliovault-operator
+    icon: https://www.trilio.io/wp-content/uploads/2021/01/Trilio-2020-logo-RGB-gray-green.png
+    kubeVersion: '>=1.18.0-0'
+    maintainers:
+    - email: prafull.ladha@trilio.io
+      name: prafull11
+    name: k8s-triliovault-operator
+    sources:
+    - https://github.com/trilioData/k8s-triliovault-operator
+    urls:
+    - assets/k8s-triliovault-operator/k8s-triliovault-operator-2.7.0.tgz
+    version: 2.7.0
+  - annotations:
+      catalog.cattle.io/certified: partner
+      catalog.cattle.io/display-name: TrilioVault for Kubernetes Operator
+      catalog.cattle.io/release-name: k8s-triliovault-operator
+    apiVersion: v1
+    appVersion: 2.6.7
+    created: "2022-02-28T06:32:27.775905566Z"
+    description: K8s-TrilioVault-Operator is an operator designed to manage the K8s-TrilioVault
+      Application Lifecycle.
+    digest: b26c6db79ad3f5e350dc822de7dfa901a8fe76c3923bfebadf543235b8ccc238
+    home: https://github.com/trilioData/k8s-triliovault-operator
+    icon: https://www.trilio.io/wp-content/uploads/2021/01/Trilio-2020-logo-RGB-gray-green.png
+    kubeVersion: '>=1.18.0-0'
+    maintainers:
+    - email: prafull.ladha@trilio.io
+      name: prafull11
+    name: k8s-triliovault-operator
+    sources:
+    - https://github.com/trilioData/k8s-triliovault-operator
+    urls:
+    - assets/k8s-triliovault-operator/k8s-triliovault-operator-2.6.700.tgz
+    version: 2.6.700
+  - annotations:
+      catalog.cattle.io/certified: partner
+      catalog.cattle.io/display-name: TrilioVault for Kubernetes Operator
+      catalog.cattle.io/release-name: k8s-triliovault-operator
+    apiVersion: v1
     appVersion: 2.6.6
     created: "2022-01-12T18:30:01.203743912Z"
     description: K8s-TrilioVault-Operator is an operator designed to manage the K8s-TrilioVault
@@ -2187,6 +2418,83 @@ entries:
     urls:
     - assets/k8s-triliovault-operator/k8s-triliovault-operator-v2.0.200.tgz
     version: v2.0.200
+  k10:
+  - annotations:
+      catalog.cattle.io/certified: partner
+      catalog.cattle.io/display-name: K10
+      catalog.cattle.io/release-name: k10
+    apiVersion: v2
+    appVersion: 4.5.12
+    created: "2022-03-30T11:09:17.321388835Z"
+    description: Kasten’s K10 Data Management Platform
+    digest: 311b769bf3980df572e8e0dcee59838b5a3af6348be2213230eb8580a64cc8a0
+    home: https://kasten.io/
+    icon: https://docs.kasten.io/_static/kasten-logo-vertical.png
+    kubeVersion: '>= 1.17.0-0'
+    maintainers:
+    - email: support@kasten.io
+      name: kastenIO
+    name: k10
+    urls:
+    - assets/k10/k10-4.5.1200.tgz
+    version: 4.5.1200
+  - annotations:
+      catalog.cattle.io/certified: partner
+      catalog.cattle.io/display-name: K10
+      catalog.cattle.io/release-name: k10
+    apiVersion: v2
+    appVersion: 4.5.11
+    created: "2022-03-17T11:38:33.444913099Z"
+    description: Kasten’s K10 Data Management Platform
+    digest: 28fa4e635b3643559cec9bdf0eb5def580bbcc36efaf2c1f7cf30259043e4757
+    home: https://kasten.io/
+    icon: https://docs.kasten.io/_static/kasten-logo-vertical.png
+    kubeVersion: '>= 1.17.0-0'
+    maintainers:
+    - email: support@kasten.io
+      name: kastenIO
+    name: k10
+    urls:
+    - assets/k10/k10-4.5.1100.tgz
+    version: 4.5.1100
+  - annotations:
+      catalog.cattle.io/certified: partner
+      catalog.cattle.io/display-name: K10
+      catalog.cattle.io/release-name: k10
+    apiVersion: v2
+    appVersion: 4.5.10
+    created: "2022-03-04T08:23:12.684807793Z"
+    description: Kasten’s K10 Data Management Platform
+    digest: 6939cf3035425f563c803605ac536f3d4be9f7cc6278d50743c122b064d0a757
+    home: https://kasten.io/
+    icon: https://docs.kasten.io/_static/kasten-logo-vertical.png
+    kubeVersion: '>= 1.17.0-0'
+    maintainers:
+    - email: support@kasten.io
+      name: kastenIO
+    name: k10
+    urls:
+    - assets/k10/k10-4.5.1000.tgz
+    version: 4.5.1000
+  - annotations:
+      catalog.cattle.io/certified: partner
+      catalog.cattle.io/display-name: K10
+      catalog.cattle.io/release-name: k10
+    apiVersion: v2
+    appVersion: 4.5.9
+    created: "2022-02-17T18:52:45.774810006+05:30"
+    description: Kasten’s K10 Data Management Platform
+    digest: bca3c5f9a5335047c1afc753b90d7fae999b7314b21f0b15132f529e84941221
+    home: https://kasten.io/
+    icon: https://docs.kasten.io/_static/kasten-logo-vertical.png
+    kubeVersion: '>= 1.17.0-0'
+    maintainers:
+    - email: support@kasten.io
+      name: kastenIO
+    name: k10
+    urls:
+    - assets/k10/k10-4.5.900.tgz
+    version: 4.5.900
   kong:
   - annotations:
       catalog.cattle.io/certified: partner
@@ -2306,6 +2614,27 @@ entries:
     - assets/nats/nats-0.10.0.tgz
     version: 0.10.0
   neuvector:
+  - annotations:
+      catalog.cattle.io/certified: partner
+      catalog.cattle.io/display-name: NeuVector
+      catalog.cattle.io/release-name: neuvector
+    apiVersion: v1
+    appVersion: 4.4.4
+    created: "2022-02-23T16:15:47.730445764-08:00"
+    description: Helm chart for NeuVector's core services
+    digest: 3acc84eae24466ea0e60c6044059173c693aeeb049484bbcb8730874efef589f
+    home: https://neuvector.com
+    icon: https://avatars2.githubusercontent.com/u/19367275?s=200&v=4
+    keywords:
+    - security
+    kubeVersion: '>=1.13.0-0'
+    maintainers:
+    - email: support@neuvector.com
+      name: becitsthere
+    name: neuvector
+    urls:
+    - assets/neuvector/neuvector-1.9.100.tgz
+    version: 1.9.100
   - annotations:
       catalog.cattle.io/certified: partner
       catalog.cattle.io/display-name: NeuVector
@@ -2469,6 +2798,21 @@ entries:
       catalog.cattle.io/display-name: NGINX Service Mesh
       catalog.cattle.io/release-name: nginx-service-mesh
     apiVersion: v2
+    appVersion: 1.4.0
+    created: "2022-03-03T08:49:23.301863-07:00"
+    description: NGINX Service Mesh
+    digest: 3f067bbd6478467c6adc23160094e872eb7595080178ec4b7e217d5a1dde56fe
+    icon: https://raw.githubusercontent.com/nginxinc/nginx-service-mesh/master/helm-chart/chart-icon.png
+    kubeVersion: '>= 1.18-0'
+    name: nginx-service-mesh
+    urls:
+    - assets/nginx-service-mesh/nginx-service-mesh-0.4.0.tgz
+    version: 0.4.0
+  - annotations:
+      catalog.cattle.io/certified: partner
+      catalog.cattle.io/display-name: NGINX Service Mesh
+      catalog.cattle.io/release-name: nginx-service-mesh
+    apiVersion: v2
     appVersion: 1.3.1
     created: "2021-11-22T12:47:57.317917-07:00"
     description: NGINX Service Mesh
@@ -2533,6 +2877,88 @@ entries:
     - assets/nutanix-csi-snapshot/nutanix-csi-snapshot-1.0.0.tgz
     version: 1.0.0
   nutanix-csi-storage:
+  - annotations:
+      artifacthub.io/changes: |
+        - Update Nutanix CSI Driver to 2.5.1
+      artifacthub.io/containsSecurityUpdates: "true"
+      artifacthub.io/displayName: Nutanix CSI Storage
+      artifacthub.io/links: |
+        - name: Nutanix CSI Driver documentation
+          url: https://portal.nutanix.com/page/documents/details?targetId=CSI-Volume-Driver-v2_5:CSI-Volume-Driver-v2_5
+      artifacthub.io/maintainers: |
+        - name: Nutanix Cloud Native Team
+          email: cloudnative@nutanix.com
+      artifacthub.io/recommendations: |
+        - url: https://artifacthub.io/packages/helm/nutanix/nutanix-csi-snapshot
+      catalog.cattle.io/certified: partner
+      catalog.cattle.io/display-name: Nutanix CSI Storage
+      catalog.cattle.io/release-name: nutanix-csi-storage
+    apiVersion: v1
+    appVersion: 2.5.1
+    created: "2022-03-24T10:35:40.177919+01:00"
+    description: Nutanix Container Storage Interface (CSI) Driver
+    digest: ddd1a163b98b147babf3e6a3cbb5bf80f64c498d04d7676186021f7992136c8f
+    home: https://github.com/nutanix/helm
+    icon: https://avatars2.githubusercontent.com/u/6165865?s=200&v=4
+    keywords:
+    - Nutanix
+    - Storage
+    - Volumes
+    - Files
+    - StorageClass
+    - RedHat
+    - CentOS
+    - Ubuntu
+    - CSI
+    kubeVersion: '>= 1.17.0-0'
+    maintainers:
+    - email: cloudnative@nutanix.com
+      name: nutanix-cloud-native-bot
+    name: nutanix-csi-storage
+    urls:
+    - assets/nutanix-csi-storage/nutanix-csi-storage-2.5.200.tgz
+    version: 2.5.200
+  - annotations:
+      artifacthub.io/changes: |
+        - Update Nutanix CSI Driver to 2.5.0
+      artifacthub.io/containsSecurityUpdates: "true"
+      artifacthub.io/displayName: Nutanix CSI Storage
+      artifacthub.io/links: |
+        - name: Nutanix CSI Driver documentation
+          url: https://portal.nutanix.com/page/documents/details?targetId=CSI-Volume-Driver-v2_5_0:CSI-Volume-Driver-v2_5_0
+      artifacthub.io/maintainers: |
+        - name: Nutanix Cloud Native Team
+          email: cloudnative@nutanix.com
+      artifacthub.io/recommendations: |
+        - url: https://artifacthub.io/packages/helm/nutanix/nutanix-csi-snapshot
+      catalog.cattle.io/certified: partner
+      catalog.cattle.io/display-name: Nutanix CSI Storage
+      catalog.cattle.io/release-name: nutanix-csi-storage
+    apiVersion: v1
+    appVersion: 2.5.1
+    created: "2022-02-17T11:01:02.445518+01:00"
+    description: Nutanix Container Storage Interface (CSI) Driver
+    digest: 9780b825e3298991fb93e6fa7764be7cd8fad51470b8684cd1cac13a5a26e187
+    home: https://github.com/nutanix/helm
+    icon: https://avatars2.githubusercontent.com/u/6165865?s=200&v=4
+    keywords:
+    - Nutanix
+    - Storage
+    - Volumes
+    - Files
+    - StorageClass
+    - RedHat
+    - CentOS
+    - Ubuntu
+    - CSI
+    kubeVersion: '>= 1.17.0-0'
+    maintainers:
+    - email: cloudnative@nutanix.com
+      name: nutanix-cloud-native-bot
+    name: nutanix-csi-storage
+    urls:
+    - assets/nutanix-csi-storage/nutanix-csi-storage-2.5.100.tgz
+    version: 2.5.100
   - annotations:
       artifacthub.io/changes: |
         - Update Nutanix CSI Driver to 2.5.0
@@ -2637,6 +3063,36 @@ entries:
     - assets/nutanix-csi-storage/nutanix-csi-storage-2.3.100.tgz
     version: 2.3.100
   ondat-operator:
+  - annotations:
+      catalog.cattle.io/certified: partner
+      catalog.cattle.io/display-name: Ondat Operator
+      catalog.cattle.io/release-name: ondat-operator
+    apiVersion: v2
+    appVersion: v2.6.0
+    created: "2022-02-24T15:13:07.677580962Z"
+    description: Cloud Native storage for containers
+    digest: edfbee79757a2403fab03bcb3f220a205ac31c95330045a215c9a49d2c03c65a
+    home: https://ondat.io
+    icon: https://docs.ondat.io/images/generic/Ondat_logo.svg
+    keywords:
+    - storage
+    - block-storage
+    - volume
+    - operator
+    kubeVersion: '>= 1.19'
+    maintainers:
+    - email: david@ondat.io
+      name: DavidMarchant
+    - email: richard.kovacs@ondat.io
+      name: mhmxs
+    - email: angelos.perivolaropoulos@ondat.io
+      name: aeroniero33
+    name: ondat-operator
+    sources:
+    - https://github.com/ondat
+    urls:
+    - assets/ondat-operator/ondat-operator-0.5.400.tgz
+    version: 0.5.400
   - annotations:
       catalog.cattle.io/certified: partner
       catalog.cattle.io/display-name: Ondat Operator
@@ -2974,7 +3430,98 @@ entries:
     urls:
     - assets/portworx/portworx-2.8.0.tgz
     version: 2.8.0
+  sextant:
+  - annotations:
+      catalog.cattle.io/certified: partner
+      catalog.cattle.io/display-name: Sextant
+      catalog.cattle.io/release-name: sextant
+    apiVersion: v2
+    appVersion: 2.1.8
+    created: "2022-03-16T11:49:30.693863Z"
+    dependencies:
+    - name: standard-defs
+      repository: file://./charts/standard-defs
+    description: Sextant automates the deployment and management of enterprise blockchain
+      infrastructure.
+    digest: 7f1db7e94eb99ee7bf20cefecf5fbad63868703bf9b2f0207e72dc38822be2e6
+    home: https://www.blockchaintp.com/sextant
+    icon: https://sextant-resources.s3.amazonaws.com/icons/large-logo-blue.svg
+    keywords:
+    - blockchain
+    - smart contracts
+    kubeVersion: '>=1.19-0'
+    name: sextant
+    type: application
+    urls:
+    - assets/sextant/sextant-2.2.1700.tgz
+    version: 2.2.1700
   shipa:
+  - annotations:
+      catalog.cattle.io/certified: partner
+      catalog.cattle.io/display-name: Shipa
+      catalog.cattle.io/namespace: shipa-system
+      catalog.cattle.io/release-name: shipa
+    apiVersion: v2
+    appVersion: 1.6.3
+    created: "2022-03-10T11:11:46.734501-05:00"
+    dependencies:
+    - name: mongodb-replicaset
+      repository: file://./charts/mongodb-replicaset
+      tags:
+      - defaultDB
+    description: A Helm chart for Kubernetes to install the Shipa Control Plane
+    digest: e02796981c55f681bc10a1e626217dc08b9bbc6010cba9839da07002086208bc
+    home: https://www.shipa.io
+    icon: https://www.shipa.io/wp-content/uploads/2020/11/Shipa-banner-768x307.png
+    keywords:
+    - shipa
+    - deployment
+    - aac
+    kubeVersion: '>= 1.16.0-0'
+    maintainers:
+    - email: rlachhman@shipa.io
+      name: ravi
+    name: shipa
+    sources:
+    - https://github.com/shipa-corp
+    - https://github.com/shipa-corp/helm-chart
+    type: application
+    urls:
+    - assets/shipa/shipa-1.6.300.tgz
+    version: 1.6.300
+  - annotations:
+      catalog.cattle.io/certified: partner
+      catalog.cattle.io/display-name: Shipa
+      catalog.cattle.io/namespace: shipa-system
+      catalog.cattle.io/release-name: shipa
+    apiVersion: v2
+    appVersion: 1.6.1
+    created: "2022-02-15T15:20:25.077532-05:00"
+    dependencies:
+    - name: mongodb-replicaset
+      repository: file://./charts/mongodb-replicaset
+      tags:
+      - defaultDB
+    description: A Helm chart for Kubernetes to install the Shipa Control Plane
+    digest: 283d1fdb60a0cbeb16abf622da1265f3d712820c851c73f2aa13a140aca7dcce
+    home: https://www.shipa.io
+    icon: https://www.shipa.io/wp-content/uploads/2020/11/Shipa-banner-768x307.png
+    keywords:
+    - shipa
+    - deployment
+    - aac
+    kubeVersion: '>= 1.16.0-0'
+    maintainers:
+    - email: rlachhman@shipa.io
+      name: ravi
+    name: shipa
+    sources:
+    - https://github.com/shipa-corp
+    - https://github.com/shipa-corp/helm-chart
+    type: application
+    urls:
+    - assets/shipa/shipa-1.6.100.tgz
+    version: 1.6.100
   - annotations:
       catalog.cattle.io/certified: partner
       catalog.cattle.io/display-name: Shipa
@@ -3080,6 +3627,36 @@ entries:
       catalog.cattle.io/display-name: Speedscale Operator
       catalog.cattle.io/release-name: speedscale-operator
     apiVersion: v1
+    appVersion: 0.11.43
+    created: "2022-02-18T12:22:53.941072-05:00"
+    description: Stress test your APIs with real world scenarios.  Collect and replay
+      traffic without scripting.
+    digest: f9257740c46c1c0b9b16e38a98458249409e4b1bdb5b5fdec932ebc4b72d65d4
+    home: https://speedscale.com
+    icon: https://raw.githubusercontent.com/speedscale/assets/main/logo/gold_logo_only.png
+    keywords:
+    - speedscale
+    - test
+    - testing
+    - regression
+    - reliability
+    - load
+    - replay
+    - network
+    - traffic
+    kubeVersion: '>= 1.17.0-0'
+    maintainers:
+    - email: support@speedscale.com
+      name: Speedscale Support
+    name: speedscale-operator
+    urls:
+    - assets/speedscale-operator/speedscale-operator-0.11.4300.tgz
+    version: 0.11.4300
+  - annotations:
+      catalog.cattle.io/certified: partner
+      catalog.cattle.io/display-name: Speedscale Operator
+      catalog.cattle.io/release-name: speedscale-operator
+    apiVersion: v1
     appVersion: 0.9.126
     created: "2021-11-24T11:20:35.736981-05:00"
     description: Stress test your APIs with real world scenarios.  Collect and replay
@@ -3142,6 +3719,66 @@ entries:
     - assets/sysdig/sysdig-1.9.200.tgz
     version: 1.9.200
   traefik:
+  - annotations:
+      catalog.cattle.io/certified: partner
+      catalog.cattle.io/display-name: Traefik Proxy
+      catalog.cattle.io/release-name: traefik
+    apiVersion: v2
+    appVersion: 2.6.2
+    created: "2022-03-28T14:11:06.990992+02:00"
+    description: A Traefik based Kubernetes ingress controller
+    digest: 219c8c2c1052471e23665bf6c2e45b819580071c202e1a0379f4b963a6ab532f
+    home: https://traefik.io/
+    icon: https://raw.githubusercontent.com/traefik/traefik/v2.3/docs/content/assets/img/traefik.logo.png
+    keywords:
+    - traefik
+    - ingress
+    kubeVersion: '>= 1.16.0-0'
+    maintainers:
+    - email: emile@vauge.com
+      name: emilevauge
+    - email: daniel.tomcej@gmail.com
+      name: dtomcej
+    - email: ldez@traefik.io
+      name: ldez
+    name: traefik
+    sources:
+    - https://github.com/traefik/traefik
+    - https://github.com/traefik/traefik-helm-chart
+    type: application
+    urls:
+    - assets/traefik/traefik-10.19.0.tgz
+    version: 10.19.0
+  - annotations:
+      catalog.cattle.io/certified: partner
+      catalog.cattle.io/display-name: Traefik Proxy
+      catalog.cattle.io/release-name: traefik
+    apiVersion: v2
+    appVersion: 2.6.1
+    created: "2022-03-15T13:55:28.451115+01:00"
+    description: A Traefik based Kubernetes ingress controller
+    digest: 13de9fd13474f9abcdf3f474a794dc6f9995caaf4844d3e5ce4d7262ee30b3b8
+    home: https://traefik.io/
+    icon: https://raw.githubusercontent.com/traefik/traefik/v2.3/docs/content/assets/img/traefik.logo.png
+    keywords:
+    - traefik
+    - ingress
+    kubeVersion: '>= 1.16.0-0'
+    maintainers:
+    - email: emile@vauge.com
+      name: emilevauge
+    - email: daniel.tomcej@gmail.com
+      name: dtomcej
+    - email: ldez@traefik.io
+      name: ldez
+    name: traefik
+    sources:
+    - https://github.com/traefik/traefik
+    - https://github.com/traefik/traefik-helm-chart
+    type: application
+    urls:
+    - assets/traefik/traefik-10.15.0.tgz
+    version: 10.15.0
   - annotations:
       catalog.cattle.io/certified: partner
       catalog.cattle.io/display-name: Traefik Proxy
@@ -3292,6 +3929,50 @@ entries:
     urls:
     - assets/universal-crossplane/universal-crossplane-1.5.100101.tgz
     version: 1.5.100101
+  - annotations:
+      catalog.cattle.io/certified: partner
+      catalog.cattle.io/display-name: Upbound Universal Crossplane
+      catalog.cattle.io/release-name: universal-crossplane
+    apiVersion: v1
+    appVersion: 1.4.4001
+    created: "2022-02-27T17:31:03.077775885-05:00"
+    description: Upbound Universal Crossplane (UXP) is Upbound's official enterprise-grade
+      distribution of Crossplane.
+    digest: 8449146ae4326b72379451982afaa806a0342748bd9e097d128ebd1477e9e454
+    home: https://upbound.io
+    icon: https://raw.githubusercontent.com/upbound/universal-crossplane/66ce9eb2c5a0c3af8ed7d19551a2c4d743b933b9/docs/media/logo.png
+    keywords:
+    - cloud
+    - infrastructure
+    - services
+    - application
+    - database
+    - cache
+    - bucket
+    - infra
+    - app
+    - ops
+    - oam
+    - gcp
+    - azure
+    - aws
+    - alibaba
+    - cloudsql
+    - rds
+    - s3
+    - azuredatabase
+    - asparadb
+    - gke
+    - aks
+    - eks
+    kubeVersion: '>= 1.15'
+    maintainers:
+    - email: info@upbound.io
+      name: Upbound Inc.
+    name: universal-crossplane
+    urls:
+    - assets/universal-crossplane/universal-crossplane-1.4.400101.tgz
+    version: 1.4.400101
   - annotations:
       catalog.cattle.io/certified: partner
       catalog.cattle.io/display-name: Upbound Universal Crossplane
@@ -3518,6 +4199,46 @@ entries:
     - assets/universal-crossplane/universal-crossplane-1.2.200100.tgz
     version: 1.2.200100
   vals-operator:
+  - annotations:
+      catalog.cattle.io/certified: partner
+      catalog.cattle.io/display-name: Vals-Operator
+      catalog.cattle.io/release-name: vals-operator
+    apiVersion: v2
+    appVersion: v0.6.0
+    created: "2022-03-04T10:37:28.513835Z"
+    description: This helm chart installs the Digitalis Vals Operator to manage sync
+      secrets from supported backends into Kubernetes
+    digest: 79559a888d386a7f716530c50b4f20e1cc8dfd7efdee0c46bb742bfdfafe308d
+    icon: https://digitalis.io/wp-content/uploads/2020/06/cropped-Digitalis-512x512-Blue_Digitalis-512x512-Blue-32x32.png
+    kubeVersion: '>= 1.19'
+    maintainers:
+    - email: info@digitalis.io
+      name: Digitalis.IO
+    name: vals-operator
+    type: application
+    urls:
+    - assets/vals-operator/vals-operator-0.5.1.tgz
+    version: 0.5.1
+  - annotations:
+      catalog.cattle.io/certified: partner
+      catalog.cattle.io/display-name: Vals-Operator
+      catalog.cattle.io/release-name: vals-operator
+    apiVersion: v2
+    appVersion: v0.5.0
+    created: "2022-02-18T13:18:49.589482-05:00"
+    description: This helm chart installs the Digitalis Vals Operator to manage sync
+      secrets from supported backends into Kubernetes
+    digest: 48919f4c9e4bf65c84d300466758533ef63ef00023403ce4fcd5189606af7d6a
+    icon: https://digitalis.io/wp-content/uploads/2020/06/cropped-Digitalis-512x512-Blue_Digitalis-512x512-Blue-32x32.png
+    kubeVersion: '>= 1.19'
+    maintainers:
+    - email: info@digitalis.io
+      name: Digitalis.IO
+    name: vals-operator
+    type: application
+    urls:
+    - assets/vals-operator/vals-operator-0.4.1.tgz
+    version: 0.4.1
   - apiVersion: v2
     appVersion: v0.4.0
     created: "2022-01-07T09:27:48.235665Z"
@@ -3554,4 +4275,21 @@ entries:
     urls:
     - assets/vals-operator/vals-operator-0.2.1.tgz
     version: 0.2.1
+  ziti-host:
+  - annotations:
+      catalog.cattle.io/certified: partner
+      catalog.cattle.io/display-name: OpenZiti Service-Hosting
+      catalog.cattle.io/release-name: ziti-host
+    apiVersion: v2
+    appVersion: 0.24.12
+    created: "2022-03-12T22:09:23.519926097-05:00"
+    description: Host NetFoundry services with a single replica pod
+    digest: ab8c3ed227d94ac33b2186d7856d2eea329c321d5fa95be8150e1cc1473ea42f
+    icon: https://partner-charts.rancher.io/assets/logos/ziti-host.png
+    kubeVersion: '>= 1.20'
+    name: ziti-host
+    type: application
+    urls:
+    - assets/ziti-host/ziti-host-1.5.1.tgz
+    version: 1.5.1
 generated: "2021-06-23T17:44:55.374388-07:00"
